@@ -1,0 +1,100 @@
+    1  clear
+    2  yum install -y java-1.8.0-openjdk-devel
+    3  java -version
+    4  cd /opt/
+    5  curl -O http://mirrors.estointernet.in/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip
+    6  ls -lh
+    7  unzip apache-maven-3.6.0-bin.zip
+    8  yum install -y unzip wget >/dev/null
+    9  unzip apache-maven-3.6.0-bin.zip
+   10  ls -l
+   11  cd apache-maven-3.6.0
+   12  ls
+   13  cd bin/
+   14  ls
+   15  ./mvn --version
+   16  env
+   17  ls
+   18  echo %PATH
+   19  echo $PATH
+   20  export PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/opt/apache-maven-3.6.0/bin
+   21  echo $PATH
+   22  cd /opt/
+   23  ls
+   24  mvn --help
+   25  clear
+   26  mvn archetype:generate
+   27  ls
+   28  cd promotions/
+   29  ls -l
+   30  yum install -y tree >/dev/null
+   31  tree
+   32  vi src/main/java/flipkart/App.java
+   33  mvn compile
+   34  tree
+   35  mvn compile
+   36  mvn test-compile
+   37  tree
+   38  mvn test
+   39  tree
+   40  cd target/surefire-reports/
+   41  ls -l
+   42  view flipkart.AppTest.txt
+   43  vi TEST-flipkart.AppTest.xml
+   44  cd ../../
+   45  mvn package
+   46  tree
+   47  ls
+   48  vi pom.xml
+   49  vi src/test/java/flipkart/AppTest.java
+   50  vi pom.xml
+   51  cd src/
+   52  mvn verify
+   53  cd ..
+   54  ls
+   55  mvn verify
+   56  git
+   57  cd /opt/
+   58  ls
+   59  yum install -y git >/dev/null
+   60  git clone https://github.com/gouthamchilakala/PetClinic.git
+   61  ls
+   62  cd PetClinic/
+   63  ls
+   64  vi pom.xml
+   65  mvn package
+   66  cd target/
+   67  ls
+   68  cd ..
+   69  ls
+   70  cd /opt/
+   71  pwd
+   72  ls -l
+   73  wget http://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.38/bin/apache-tomcat-8.5.38.tar.gz
+   74  ls -l
+   75  tar zxf apache-tomcat-8.5.38.tar.gz
+   76  ls -l
+   77  cd apache-tomcat-8.5.38
+   78  ls
+   79  cd bin/
+   80  ls
+   81  ./version.sh
+   82  ./startup.sh
+   83  ./shutdown.sh
+   84  ls
+   85  cd ..
+   86  ls
+   87  cd /opt/
+   88  ls -l
+   89  cd PetClinic/target/
+   90  ls
+   91  cp petclinic.war /opt/apache-tomcat-8.5.38/webapps/
+   92  cd /opt/apache-tomcat-8.5.38/
+   93  ls
+   94  cd webapps/
+   95  ls
+   96  cd ..
+   97  cd bin/
+   98  ls
+   99  ./startup.sh
+  100  history
