@@ -1,0 +1,19 @@
+    1  yum repolist
+    2  yum-config-manager --enable rhui-REGION-rhel-server-extras >/dev/null
+    3  yum repolist
+    4  cd /opt/
+    5  clear
+    6  curl -O https://releases.ansible.com/ansible/rpm/release/epel-7-x86_64/ansible-2.7.7-1.el7.ans.noarch.rpm
+    7  ls -lh
+    8  yum install ansible-2.7.7-1.el7.ans.noarch.rpm
+    9  ansible --version
+   10  clear
+   11  ssh-keygen
+   12  cd /root/
+   13  ls -a
+   14  cd .ssh/
+   15  ls
+   16  cat id_rsa.pub
+   17  clear
+   18  cat id_rsa.pub
+   19  ssh-copy-id root@ec2-34-238-120-69.compute-1.amazonaws.com
